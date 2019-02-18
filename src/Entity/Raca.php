@@ -16,8 +16,37 @@ class Raca
      */
     private $id;
 
-    public function getId(): ?int
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", length=50)
+     */
+    private $nome;
+
+    /**
+     * @return mixed
+     */
+    public function getId()
     {
         return $this->id;
     }
+
+    /**
+     * @return string
+     */
+    public function getNome(): string
+    {
+        return $this->nome;
+    }
+
+    /**
+     * @param string $nome
+     * @return Raca
+     */
+    public function setNome(string $nome): Raca
+    {
+        $this->nome = $nome;
+        return $this;
+    }
+
 }
