@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Listagem de Animal - {% endblock %}
+
+{% block body %}
+
+    <h1>Listagem de Animais</h1>
+    <hr>
+
+    <div class="row">
+        <div class="col-md-12">
+            <a href="" class="btn btn-primary pull-right">Cadastrar Animal</a>
+        </div>
+    </div>
+    <table class="table table-hover table-striped mt-3">
+        <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for animal in animais %}
+            <tr>
+                <th>{{ animal.id }}</th>
+                <th><a href="">{{ animal.nome }}</a></th>
+                <th>{{ animal.dataNascimento }}</th>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">Nenhum registro encontrado!</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Listagem de Cliente - {% endblock %}
+
+{% block body %}
+
+    <h1>Listagem de clientes</h1>
+    <hr>
+
+    <div class="row">
+        <div class="col-md-12">
+            <a href="" class="btn btn-primary pull-right">Cadastrar Cliente</a>
+        </div>
+    </div>
+    <table class="table table-hover table-striped mt-3">
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cliente in clientes %}
+        <tr>
+            <th>{{ cliente.id }}</th>
+            <th><a href="">{{ cliente.nome }}</a></th>
+            <th>{{ cliente.email }}</th>
+        </tr>
+            {% else %}
+                <tr>
+                    <td colspan="3">Nenhum registro encontrado!</td>
+                </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
