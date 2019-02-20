@@ -55,7 +55,7 @@ class Animal
      /**
      * @return string
      */
-    public function getNome(): string
+    public function getNome()
     {
         return $this->nome;
     }
@@ -73,7 +73,7 @@ class Animal
     /**
      * @return date
      */
-    public function getDataNascimento(): date
+    public function getDataNascimento()
     {
         return $this->data_nascimento;
     }
@@ -109,7 +109,7 @@ class Animal
     /**
      * @return object
      */
-    public function getRaca(): object
+    public function getRaca()
     {
         return $this->raca;
     }

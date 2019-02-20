@@ -74,4 +74,8 @@ class Raca
         return $this;
     }
 
+    public function getNomeEspecie()
+    {
+        return $this->getEspecie() ? $this->getEspecie()->getNome() : null ;
+    }
 }
